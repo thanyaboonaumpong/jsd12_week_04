@@ -1,0 +1,21 @@
+
+body {
+    background-color: black;
+    margin: 0;
+    display: flex;           
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.tiktok-t {
+    color: white;
+    font-size: 200px;
+    font-family: sans-serif;
+    font-weight: bold;
+
+    text-shadow:
+    -5px -2px 0 #25F4EE,
+     5px  2px 0 #FE2C55;
+}
+/* ทั้งหมดนี้AI เสกแล้วมานั่งดูการทำงานทีหลัง
