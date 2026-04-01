@@ -1,0 +1,68 @@
+/* พื้นฐาน */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #F2F2F2; color: #333; line-height: 1.6; }
+
+/* 1. Navbar: Fixed & Z-index */
+.navbar {
+    position: fixed; top: 0; width: 100%; height: 70px;
+    background: #466995; color: white;
+    display: flex; justify-content: space-between;
+    align-items: center; padding: 0 5%; z-index: 1000;
+}
+
+/* 2. Hero Section: จุดขาย */
+.hero {
+    height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg-chair.jpg');
+    background-size: cover; text-align: center; color: white; padding: 0 20px;
+}
+
+/* 3. ปุ่ม Get Started (CTA): ทำให้เด่นที่สุด! */
+.btn-main {
+    display: inline-block; padding: 15px 40px;
+    background: #4D00FF; color: white; text-decoration: none;
+    border-radius: 30px; font-weight: bold; font-size: 1.2rem;
+    transition: transform 0.3s; margin-top: 20px;
+}
+.btn-main:hover { transform: scale(1.1); background: #3c00cc; }
+
+/* 4. Responsive Grid: ในคอมมี 2-3 กล่อง ในมือถือเหลือ 1 กล่อง */
+.product-grid {
+    display: flex; flex-wrap: wrap; justify-content: center; padding: 50px 5%;
+}
+.card {
+    background: white; margin: 15px; padding: 25px;
+    width: calc(45% - 30px); border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.ErgoPro-X1-Mesh-img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.ErgoPro-X1-Mesh-img:hover {transform: scale(1.1);}
+
+.ComfortBack-Z-img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.ComfortBack-Z-img:hover {transform: scale(1.1);}
+
+
+/* 📱 5. Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+    .card { width: 100%; } /* ในมือถือให้กว้างเต็มจอ */
+    .hero h1 { font-size: 1.8rem; }
+    .navbar nav { display: none; } /* ซ่อนเมนูบางส่วนในมือถือเพื่อความสะอาด */
+}
